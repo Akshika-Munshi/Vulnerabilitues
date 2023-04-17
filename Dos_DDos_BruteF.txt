@@ -1,0 +1,13 @@
+A Brute-force attack is a trial and error method used by hackers to guess credentials or encrypted data such as login, passwords or encryption keys, through exhaustive effort 
+ admin access to the targeted website to perform some illegal activity intruder/hacker wants to do
+
+
+ (DoS) attack is an attack meant to shut down a website or a web server, making it inaccessible to its intended users by flooding it with useless traffic (junk requests) from a single host (IP address).
+*f WordPress can be exploited as an attack vector for DoS attacks. For instance, CVE-2018-6389*
+
+A DDoS attack is short for “Distributed DoS attack”. Such attacks are mounted by flooding the targeted website or web server with useless traffic from multiple devices or a botnet. A botnet is a network of computers infected with malicious software (malware).Mounting DDoS attacks are ordered by unscrupulous competitors
+
+ push down the victim, the targeted website, or the web server and make a profit from that.
+
+Brute-force attacks against WordPress can be successfully mitigated by WP Cerber plugin. Among other security features, it protects XML-RPC and REST API interfaces.
+DoS attacks can be mitigated with a special web server configuration  
